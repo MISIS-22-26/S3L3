@@ -31,13 +31,14 @@
             button1 = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(189, 78);
+            button1.Location = new Point(23, 78);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -57,15 +58,30 @@
             // 
             textBox2.Location = new Point(12, 41);
             textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
             textBox2.Size = new Size(426, 23);
             textBox2.TabIndex = 2;
             // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = SystemColors.ButtonFace;
+            button2.Location = new Point(363, 78);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 3;
+            button2.Text = "Decipher";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
+            AcceptButton = button1;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(452, 113);
+            Controls.Add(button2);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button1);
@@ -81,5 +97,6 @@
         private Button button1;
         private TextBox textBox1;
         private TextBox textBox2;
+        private Button button2;
     }
 }
