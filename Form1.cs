@@ -1,10 +1,10 @@
-using System.Numerics;
-
 namespace L3
 {
     // Actual Window
     public partial class Form1 : Form
     {
+
+        int phase = 6;
         // Constructor
         public Form1()
         {
@@ -20,7 +20,8 @@ namespace L3
         private void button1_Click(object sender, EventArgs e) => current_action = current_action == Cipher ? Decipher : Cipher;
 
         // Cesar's Cipher
-        private string Cipher(int phase = 5) {
+        private string Cipher(int phase = 5)
+        {
             var message = textBox1.Text.ToCharArray();
             for (var index = 0; index < message.Length; index++)
             {
@@ -38,7 +39,8 @@ namespace L3
             }
             return new(message);
         }
-        private string Decipher(int phase = 5) {
+        private string Decipher(int phase = 5)
+        {
             var message = textBox1.Text.ToCharArray();
             for (var index = 0; index < message.Length; index++)
             {
@@ -63,9 +65,12 @@ namespace L3
         {
 
         }
-        private void Paste(string message) {
+        private void Paste(string message)
+        {
             textBox2.Clear();
             textBox2.Paste(message);
         }
+
+        private void button2_Click(object sender, EventArgs e) => Do(phase);
     }
 }

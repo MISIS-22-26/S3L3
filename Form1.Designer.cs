@@ -31,13 +31,14 @@
             button1 = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(77, 108);
+            button1.Location = new Point(14, 96);
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
             button1.Size = new Size(107, 38);
@@ -57,12 +58,25 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(13, 67);
+            textBox2.Location = new Point(14, 55);
             textBox2.Margin = new Padding(4, 5, 4, 5);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(243, 31);
             textBox2.TabIndex = 2;
+            // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = SystemColors.ButtonFace;
+            button2.Location = new Point(150, 96);
+            button2.Margin = new Padding(4, 5, 4, 5);
+            button2.Name = "button2";
+            button2.Size = new Size(107, 38);
+            button2.TabIndex = 3;
+            button2.Text = "Run";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
@@ -70,7 +84,8 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(270, 163);
+            ClientSize = new Size(270, 146);
+            Controls.Add(button2);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button1);
@@ -87,5 +102,6 @@
         private Button button1;
         private TextBox textBox1;
         private TextBox textBox2;
+        private Button button2;
     }
 }
